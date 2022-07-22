@@ -8,35 +8,8 @@
             </figure>
 
             <ul>
-                <li>
-                    <a href="#">VIDEO</a>
-                </li>
-                <li>
-                    <a href="#" class="active">VIDEO</a>
-                </li>
-                <li>
-                    <a href="#">VIDEO</a>
-                </li>
-                <li>
-                    <a href="#">VIDEO</a>
-                </li>
-                <li>
-                    <a href="#">VIDEO</a>
-                </li>
-                <li>
-                    <a href="#">VIDEO</a>
-                </li>
-                <li>
-                    <a href="#">VIDEO</a>
-                </li>
-                <li>
-                    <a href="#">VIDEO</a>
-                </li>
-                <li>
-                    <a href="#">VIDEO</a>
-                </li>
-                <li>
-                    <a href="#">VIDEO</a>
+                <li v-for="item in menuItems" :key="item.key">
+                    <a :href="item.url" :class="{ 'active': item.current }">{{ item.text }}</a>
                 </li>
             </ul>
         </nav>
@@ -47,6 +20,62 @@
 
 export default {
     name: 'MainHeader',
+    data() {
+        return {
+            menuItems: [
+                {
+                    text: 'Characters',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'Comics',
+                    url: '#',
+                    current: true,
+                },
+                {
+                    text: 'Movies',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'TV',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'Games',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'Collectibles',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'Videos',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'Fans',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'News',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'Shop',
+                    url: '#',
+                    current: false,
+                },
+            ],
+        }
+    }
 }
 
 </script>
@@ -54,6 +83,8 @@ export default {
 <style scoped>
 #main-header nav {
     padding: 20px 0;
+    font-size: 12px;
+    font-weight: 700;
 }
 
 #main-header nav,
@@ -65,11 +96,7 @@ export default {
 
 #main-header img {
     height: 80px;
-}
-
-#main-header ul {
-    font-size: 12px;
-    font-weight: 700;
+    display: block;
 }
 
 #main-header ul li {
@@ -77,7 +104,6 @@ export default {
 }
 
 #main-header ul li a {
-    padding: 100% 0;
     position: relative;
 }
 
@@ -93,7 +119,7 @@ export default {
     height: 6px;
     background-color: #0282F9;
     position: absolute;
-    bottom: -18px;
+    bottom: calc(-60px + 50%);
     left: 0;
 }
 </style>

@@ -85,6 +85,7 @@ export default {
     padding: 20px 0;
     font-size: 12px;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 #main-header nav,

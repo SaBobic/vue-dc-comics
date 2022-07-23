@@ -6,15 +6,18 @@
             </div>
         </section>
 
-        <section id="tabs" class="bg-primary">
-        </section>
+        <TabsSection />
     </main>
 </template>
 
 <script>
+import TabsSection from './TabsSection.vue';
 
 export default {
     name: 'MainContent',
+    components: {
+        TabsSection,
+    }
 }
 
 </script>
@@ -27,10 +30,5 @@ export default {
     .container {
         padding: 50px 0;
     }
-}
-
-#tabs {
-    color: #fff;
-    height: 150px;
 }
 </style>

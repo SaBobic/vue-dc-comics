@@ -80,47 +80,51 @@ export default {
 
 </script>
 
-<style scoped>
-#main-header nav {
-    padding: 20px 0;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
+<style lang="scss" scoped>
+@import '../assets/sass/vars';
 
-#main-header nav,
-#main-header ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+#main-header {
+    nav {
+        padding: 20px 0;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
 
-#main-header img {
-    height: 80px;
-    display: block;
-}
+    nav,
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-#main-header ul li {
-    margin: 0 15px;
-}
+    img {
+        height: 80px;
+        display: block;
+    }
 
-#main-header ul li a {
-    position: relative;
-}
+    ul li {
+        margin: 0 15px;
 
-#main-header ul li a.active,
-#main-header ul li a:hover {
-    color: #0282F9;
-}
+        a {
+            position: relative;
 
-#main-header ul li a:hover::after,
-#main-header ul li a.active::after {
-    content: '';
-    width: 100%;
-    height: 6px;
-    background-color: #0282F9;
-    position: absolute;
-    bottom: calc(-60px + 50%);
-    left: 0;
+            &.active,
+            &:hover {
+                color: $primary_color;
+            }
+
+            &:hover::after,
+            &.active::after {
+                content: '';
+                width: 100%;
+                height: 6px;
+                background-color: $primary_color;
+                position: absolute;
+                bottom: calc(-60px + 50%);
+                left: 0;
+            }
+        }
+    }
 }
 </style>

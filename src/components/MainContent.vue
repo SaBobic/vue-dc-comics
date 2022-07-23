@@ -1,12 +1,12 @@
 <template>
     <main>
-        <section class="content">
+        <section id="main-content">
             <div class="container">
                 <h1>Content goes here</h1>
             </div>
         </section>
-        <section class="tabs">
 
+        <section id="tabs" class="bg-primary">
         </section>
     </main>
 </template>
@@ -19,18 +19,17 @@ export default {
 
 </script>
 
-<style scoped>
-section.content {
+<style lang="scss" scoped>
+#main-content {
     background-color: #000;
     color: #fff;
+
+    .container {
+        padding: 50px 0;
+    }
 }
 
-section .container {
-    padding: 50px 0;
-}
-
-section.tabs {
-    background-color: #0282F9;
+#tabs {
     color: #fff;
     height: 150px;
 }

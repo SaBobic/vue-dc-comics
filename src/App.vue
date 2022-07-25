@@ -20,13 +20,13 @@ import JumbSection from './components/JumbSection.vue';
 import SeriesSection from './components/SeriesSection.vue';
 import MainFooterBottom from './components/MainFooterBottom.vue';
 import MainFooterTop from './components/MainFooterTop.vue';
-import seriesJson from './assets/dc-comics.json';
+import series from './assets/dc-comics.json';
 
 export default {
   name: 'App',
   data() {
     return {
-      seriesJson,
+      series,
       mainMenuItems: [
         {
           text: 'Characters',
@@ -202,11 +202,6 @@ export default {
         },
       ]
     };
-  },
-  computed: {
-    series() {
-      return JSON.parse(JSON.stringify(this.seriesJson));
-    }
   },
   components: {
     MainHeader,

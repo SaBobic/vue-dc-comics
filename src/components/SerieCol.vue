@@ -2,9 +2,9 @@
     <div class="col">
         <figure>
             <div>
-                <img :src="serie.thumb" :alt="serie.series">
+                <img :src="serieSrc" :alt="serieTitle">
             </div>
-            <figcaption>{{ serie.series }}</figcaption>
+            <figcaption>{{ serieTitle }}</figcaption>
         </figure>
     </div>
 </template>
@@ -13,7 +13,8 @@
 export default {
     name: 'SerieCol',
     props: {
-        serie: Object,
+        serieSrc: String,
+        serieTitle: String,
     }
 }
 </script>

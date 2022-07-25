@@ -5,7 +5,7 @@
                 <h2>CURRENT SERIES</h2>
             </div>
             <div class="row">
-                <SerieCol v-for="(serie, i) in series" :key="i" :serie="serie" />
+                <SerieCol v-for="(serie, i) in series" :key="i" :serieSrc="serie.thumb" :serieTitle="serie.series" />
             </div>
             <button>LOAD MORE</button>
         </div>

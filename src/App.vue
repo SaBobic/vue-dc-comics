@@ -3,7 +3,7 @@
     <MainHeader />
     <main>
       <JumbSection />
-      <FilmsSection />
+      <SeriesSection />
       <TabsSection />
     </main>
     <MainFooter />
@@ -14,7 +14,7 @@
 import MainHeader from './components/MainHeader.vue';
 import TabsSection from './components/TabsSection.vue';
 import JumbSection from './components/JumbSection.vue';
-import FilmsSection from './components/FilmsSection.vue';
+import SeriesSection from './components/SeriesSection.vue';
 import MainFooter from './components/MainFooter.vue';
 
 export default {
@@ -23,7 +23,7 @@ export default {
     MainHeader,
     TabsSection,
     JumbSection,
-    FilmsSection,
+    SeriesSection,
     MainFooter,
   },
 }

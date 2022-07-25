@@ -1,21 +1,29 @@
 <template>
   <div id="app">
     <MainHeader />
-    <MainContent />
+    <main>
+      <JumbSection />
+      <FilmsSection />
+      <TabsSection />
+    </main>
     <MainFooter />
   </div>
 </template>
 
 <script>
 import MainHeader from './components/MainHeader.vue';
-import MainContent from './components/MainContent.vue';
+import TabsSection from './components/TabsSection.vue';
+import JumbSection from './components/JumbSection.vue';
+import FilmsSection from './components/FilmsSection.vue';
 import MainFooter from './components/MainFooter.vue';
 
 export default {
   name: 'App',
   components: {
     MainHeader,
-    MainContent,
+    TabsSection,
+    JumbSection,
+    FilmsSection,
     MainFooter,
   },
 }

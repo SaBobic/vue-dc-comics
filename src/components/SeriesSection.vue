@@ -5,7 +5,9 @@
                 <h2>CURRENT SERIES</h2>
             </div>
             <div class="row">
-                <SerieCol v-for="(serie, i) in series" :key="i" :serieSrc="serie.thumb" :serieTitle="serie.series" />
+                <div class="col" v-for="(serie, i) in series" :key="i">
+                    <SerieSingle :serieSrc="serie.thumb" :serieTitle="serie.series" />
+                </div>
             </div>
             <button>LOAD MORE</button>
         </div>
@@ -13,14 +15,13 @@
 </template>
 
 <script>
-import './SerieCol.vue';
-import SerieCol from './SerieCol.vue';
+import SerieSingle from './SerieSingle.vue';
 export default {
     name: "SeriesSection",
     props: {
         series: Array,
     },
-    components: { SerieCol }
+    components: { SerieSingle }
 }
 </script>
 
@@ -55,25 +56,6 @@ export default {
             .col {
                 width: calc(100% / 6);
                 padding: 15px;
-
-                figure {
-                    font-size: 14px;
-                    text-transform: uppercase;
-
-                    div {
-                        height: 180px;
-                        overflow-y: hidden;
-
-                        img {
-                            width: 100%;
-                        }
-                    }
-
-                    figcaption {
-                        padding: 15px 0;
-                        text-align: left;
-                    }
-                }
             }
         }
 
